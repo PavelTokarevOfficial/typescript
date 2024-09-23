@@ -1,0 +1,86 @@
+:root{
+  --bc: rgba(156, 156, 156, 0.45);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "JetBrains Mono", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.common{
+  &__title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  &__wrapper{
+    background-color: var(--bc);
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__accent{
+    color: #ffb700;
+    font-weight: bold;
+  }
+}
+
+pre {
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  color: greenyellow;
+}
+
+$breakpoints: (
+'xs': 0,
+'sm': 576px,
+'md': 768px,
+'lg': 992px,
+'xl': 1200px,
+'xxl': 1400px
+);
+
+$container-max-widths: (
+'sm': 540px,
+'md': 720px,
+'lg': 960px,
+'xl': 1140px,
+'xxl': 1320px
+);
+
+@mixin container-max-width {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $breakpoint, $width in $container-max-widths {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      max-width: $width;
+    }
+  }
+}
+
+.container {
+  @include container-max-width;
+}
