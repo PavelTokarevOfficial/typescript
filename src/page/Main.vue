@@ -5,6 +5,9 @@
     <Array/>
     <Functions/>
     <Classes/>
+    <Interfaces/>
+    <Enum/>
+    <Generics/>
   </main>
 </template>
 
@@ -14,6 +17,9 @@ import StructureObjects from "../components/lessons/StructureObjects.vue";
 import Array from "../components/lessons/Array.vue";
 import Functions from "../components/lessons/Functions.vue";
 import Classes from "../components/lessons/Classes.vue";
+import Interfaces from "../components/lessons/Interfaces.vue";
+import Enum from "../components/lessons/Enum.vue";
+import Generics from "../components/lessons/Generics.vue";
 
 </script>
 

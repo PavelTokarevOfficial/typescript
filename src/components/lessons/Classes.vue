@@ -3,9 +3,7 @@
     <div class="common__title">Classes</div>
     <div>
       <span class="common__accent">Car: </span>
-      {{
-        new Car('BMW', 1000).getPrices()
-      }}
+      {{  new Car('BMW', 1000).getPrices() }}
     </div>
 
 
